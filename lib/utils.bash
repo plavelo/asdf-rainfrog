@@ -44,6 +44,10 @@ download_release() {
 		os="apple-darwin"
 	fi
 
+	if [ "$os" = "linux" ]; then
+		os="unknown-linux-gnu"
+	fi
+
 	if [ "$architecture" = "arm64" ]; then
 		architecture="aarch64"
 	fi
